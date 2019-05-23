@@ -2,10 +2,16 @@
     "name": "com.golftourney.golftourney",
     "version": "1.0.0",
     "displayName": "GolfTourney",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/dalba1992/goldtourney.git"
+    },
+    "description": "GolfTourney.com mobile App.",
+    "license": "UNLICENSED",
     "cordova": {
         "platforms": [
-            "android",
-            "ios"
+            "ios",
+            "android"
         ],
         "plugins": {
             "cordova-plugin-whitelist": {},

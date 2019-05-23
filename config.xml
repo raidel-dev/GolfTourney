@@ -105,5 +105,6 @@
     <preference name="orientation" value="portrait" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
     <plugin name="cordova-plugin-inappbrowser" spec="~1.6.1" />
+    <engine name="ios" spec="^5.0.1" />
     <engine name="android" spec="^7.1.4" />
 </widget>
