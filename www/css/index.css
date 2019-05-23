@@ -1,0 +1,523 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-image: url("../img/App_background.jpg");
+    background-size: cover;
+}
+
+/* Portrait layout (default) */
+.app {
+    /*padding: 10%;*/
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+.navbar .container-fluid>.navbar-header {
+    float: left;
+    margin-right: 10px;
+}
+.navbar .navbar-nav {
+    float: left;
+    margin: 5px;
+}
+.nav>li {
+    float: left;
+}
+.navbar{
+    min-height: 0px !important;
+}
+.menu-item {
+    width: 50% !important;
+    text-align: center;
+    height: auto;
+    color: white;
+    font-weight: bold;
+}
+.menu-item img {
+    height: 36px;
+}
+.menu-item.active {
+    background-color: DarkGreen;
+}
+.header-item {
+    text-align: center;
+    font-weight: bold;
+    height: auto;
+}
+.header-item img {
+    height: 24px;
+}
+.window-hidden
+{
+    display: none;
+}
+.window-shown
+{
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+.window
+{
+    padding-top: 10%;
+}
+#search
+{
+    padding-top: 0%;
+}
+#profile
+{
+    padding-top: 0%;
+}
+#update_profile
+{
+    padding: 10%;
+    margin-top: 32px;
+    margin-bottom: 25px;
+}
+.menu-bar
+{
+    background-color: #32AB34;
+    z-index: -1;
+}
+#view-label
+{
+    color: white;
+    font-size: 4vw; 
+}
+#search-form-window
+{
+    /*background-color: #32AB34;*/
+    /*padding-top: 64px;*/
+    color: white;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7d7e7d+20,0e0e0e+100 */
+    
+}
+#search-form-padding
+{
+    padding-left: 5%;
+    padding-right: 5%;
+    background: #7d7e7d; /* Old browsers */
+    background: -moz-linear-gradient(top, #7d7e7d 20%, #0e0e0e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #7d7e7d 20%,#0e0e0e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #7d7e7d 20%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+}
+.image-centered
+{
+    display: block;
+    margin: 0 auto;
+}
+.toggle-search-form-open
+{
+    padding: 5px;
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
+}
+.toggle-search-form-closed
+{
+    padding: 5px;
+}
+
+/* Dropdown related stuff. */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    right: 0;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+.green-section
+{
+    background-color: #32AB34;
+    color: white;
+}
+#profile-image
+{
+    padding-top: 50px;
+    padding-bottom: 10px;
+    width: 100%;
+    margin: 0;
+    display: block;
+    text-align: center;
+}
+#edit-search
+{
+    color: white;
+    width: 25%;
+}
+.pull-down-visible
+{
+    display: block;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 1;
+}
+.pull-down-hidden
+{
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+@keyframes window-close {
+    from {top: 0px;}
+    to {top: -464px;}
+}
+.results-table-window
+{
+    display: block;
+    position: relative;
+    background-color: white;
+}
+.results-table-full
+{
+    display: block;
+    position: relative;
+    background-color: white;
+}
+
+#results-label
+{
+    position: relative;
+    top: 128px;
+    text-align: center;
+}
+
+#profile-img
+{
+    width: 100px;
+    margin: 10px;
+}
+
+
+#banner-details
+{
+    color: white;
+    font-weight: bold;
+}
+
+.banner_area 
+{
+    background: rgba(0, 0, 0, 0) url("../img/banner.jpg") no-repeat scroll 0 0 / cover;
+    margin: 0;
+    padding: 50px 0 50px;
+    text-align: center;
+    width: 100%;
+}
+.banner_area h1 {
+    color: #fff;
+    font-family: "robotolight";
+    font-size: 50px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.banner_area h1 span {
+    font-family: 'robotobold';
+}
+.banner_area h2 {
+    color: #fff;
+    font-family: "robotolight";
+    font-size: 60px;
+    margin: 0 0 70px 0;
+    padding: 0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.row {width:100% !important; margin: 0 auto !important;}
+
+.row {
+    margin-right: 0px !important;
+        margin-left: 0px !important;
+}
+#mid_post_location
+{
+    font-weight: bold;
+}
+.summry_section {
+    margin:0;
+    padding:60px 0 60px 0;
+    width:100%;
+    background:#ebebeb;
+}
+.summry_section h1 {
+    margin:0 0 30px 0;
+    padding:0;
+    font-size:36px;
+    color:#010101;
+    text-transform:uppercase;
+    text-align:center;
+    font-family: 'robotobold';
+}
+.summry_section p {
+    margin:0;
+    padding:0;
+    font-size:18px;
+    text-align:center;
+    color:#555555;
+    line-height:40px;
+    font-family: 'robotoregular';
+}
+.summry_section p a {
+    color:#3265ce;
+    text-decoration:none;
+}
+
+.summry_section li {
+    color:#555555;
+}
+
+.summry_section p a:hover {
+    color:#31AB34 !important;
+}
+.mid_posts_section {
+    background: rgba(0, 0, 0, 0) url("../img/mid_banner.jpg") no-repeat fixed center center / cover;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    width: 100%;
+}
+.mid_post {
+    margin:0 0 40px 0;
+    padding:0;
+    width:100%;
+    text-align:center;
+}
+.mid_post img {
+    margin-bottom:24px;
+}
+.mid_post h1 {
+    margin:0 0 10px 0;
+    padding:0;
+    font-size:32px;
+    color:#FFF;
+    text-transform:uppercase;
+    font-family: 'robotobold';
+}
+.mid_post p {
+    margin:0;
+    padding:0;
+    font-size:20px;
+    color:#FFF;
+    text-transform:uppercase;
+    font-family: 'robotolight';
+}
+.registration_section
+{
+    background: rgba(0, 0, 0, 0) url("../img/mid_banner.jpg") no-repeat fixed center center / cover;
+    margin:0;
+    padding:60px 0 60px 0;
+    width:100%;
+}
+.registration_section h1 {
+    margin:0 0 30px 0;
+    padding:0;
+    font-size:36px;
+    color: white;
+    text-transform:uppercase;
+    text-align:center;
+    font-family: 'robotobold';
+}
+.date_circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: white;
+  padding-top: 15px;
+  text-align: center;
+  background: #32AB34;
+}
+#profile-details
+{
+    padding: 10px;
+    font-size: 18px;
+}
+.multiselect-container
+{
+    overflow: auto;
+    height: 250px;
+    color: black;
+    width: 100%;
+}
+.btn-group
+{
+    width: 100%;
+}
+.multiselect-container>li>a>label {
+    font-size: 18px;
+}
+
+.table-clean td
+{
+    padding-bottom: 1em;
+    padding-left: 1em;
+    vertical-align: middle;
+    width: 60%;
+}
+.table-clean th
+{
+    padding-bottom: 1em;
+    vertical-align: middle;
+}
+#event_external_link
+{
+    color: #ffffff !important;
+    /*padding: 20px 40px;*/
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: "robotolight";
+    background: #31ab34;
+    display: inline-block;
+}
+#event_external_link:hover {
+    background: #3265CE;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    background-color: #32ab34 !important;
+    background-image: linear-gradient(to bottom,#32ab34 0,#006200 100%) !important;
+}
+#spotlight-banner {
+    margin: 0;
+    padding: 10px 0 0px 0;
+    width: 100%;
+    background: #FFD53C;
+}
+#featured-banner {
+    margin: 0;
+    padding: 10px 0 0px 0;
+    width: 100%;
+    background: #BF1E2E;
+    color: white;
+}
+#loading-menu-image
+{
+    border-radius: 10%;
+    width: 25%; 
+    margin-left: -12.5%; 
+    position: fixed; 
+    top: 0px; 
+    left: 50%; 
+    z-index: 100000;
+}
+#updating-menu-image
+{
+    border-radius: 10%;
+    width: 25%; 
+    margin-left: -12.5%; 
+    position: fixed; 
+    top: 0px; 
+    left: 50%; 
+    z-index: 100000;
+}
+.blur {
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    -o-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+}
+.event-link
+{
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.contact_section {
+    background: rgba(0, 0, 0, 0) url("../img/contact_banner.jpg") no-repeat scroll 0 0 / cover;
+    margin: 0;
+    padding: 80px 0;
+    width: 100%;
+    color: #FFF;
+}
+.contact_section h1 {
+    margin: 0 0 60px 0;
+    padding: 0;
+    font-size: 50px;
+    color: #FFF;
+    text-align: center;
+    font-family: 'robotoregular';
+}

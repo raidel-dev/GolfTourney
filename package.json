@@ -1,0 +1,21 @@
+{
+    "name": "com.golftourney.golftourney",
+    "version": "1.0.0",
+    "displayName": "GolfTourney",
+    "cordova": {
+        "platforms": [
+            "ios",
+            "android"
+        ],
+        "plugins": {
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-inappbrowser": {}
+        }
+    },
+    "dependencies": {
+        "cordova-android": "^7.1.4",
+        "cordova-ios": "^4.4.0",
+        "cordova-plugin-inappbrowser": "~1.6.1",
+        "cordova-plugin-whitelist": "^1.3.2"
+    }
+}

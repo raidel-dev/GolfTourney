@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget android-versionCode="11000" id="com.golftourney.golftourney" version="1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>GolfTourney</name>
+    <description>
+        GolfTourney.com mobile App.
+    </description>
+    <author email="bbaago@gmail.com" href="golftourney.com">
+        GolfTourney.com
+    </author>
+    <content src="login.html" />
+    <access origin="*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <icon density="ldpi" src="res/icons/android/icon-36-ldpi.png" />
+    <icon density="mdpi" src="res/icons/android/icon-48-mdpi.png" />
+    <icon density="hdpi" src="res/icons/android/icon-72-hdpi.png" />
+    <icon density="xhdpi" src="res/icons/android/icon-96-xhdpi.png" />
+    <icon density="xxhdpi" src="res/icons/android/icon-144-xxhdpi.png" />
+    <icon density="xxxhdpi" src="res/icons/android/icon-192-xxxhdpi.png" />
+    <splash density="land-hdpi" src="res/screens/android/screen-hdpi-landscape.png" />
+    <splash density="land-ldpi" src="res/screens/android/screen-ldpi-landscape.png" />
+    <splash density="land-mdpi" src="res/screens/android/screen-mdpi-landscape.png" />
+    <splash density="land-xhdpi" src="res/screens/android/screen-xhdpi-landscape.png" />
+    <splash density="land-xxhdpi" src="res/screens/android/screen-xxhdpi-landscape.png" />
+    <splash density="land-xxxhdpi" src="res/screens/android/screen-xxxhdpi-landscape.png" />
+    <splash density="port-hdpi" src="res/screens/android/screen-hdpi-portrait.png" />
+    <splash density="port-ldpi" src="res/screens/android/screen-ldpi-portrait.png" />
+    <splash density="port-mdpi" src="res/screens/android/screen-mdpi-portrait.png" />
+    <splash density="port-xhdpi" src="res/screens/android/screen-xhdpi-portrait.png" />
+    <splash density="port-xxhdpi" src="res/screens/android/screen-xxhdpi-portrait.png" />
+    <splash density="port-xxxhdpi" src="res/screens/android/screen-xxxhdpi-portrait.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="orientation" value="portrait" />
+</widget>

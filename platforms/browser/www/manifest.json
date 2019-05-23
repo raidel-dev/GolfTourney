@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "GolfTourney",
+  "short_name": "GolfTourney",
+  "version": "com.golftourney.golftourney",
+  "description": "GolfTourney.com mobile App.",
+  "author": "GolfTourney.com",
+  "icons": [],
+  "orientation": "portrait",
+  "start_url": "login.html"
+}
