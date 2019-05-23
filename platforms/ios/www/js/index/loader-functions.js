@@ -119,10 +119,10 @@ function load_event(event)
     }
 
     //Dates
-    var startdate = new Date(event_list_archive[event].event_start_date);
-    startdate = ("0" + (startdate.getMonth() + 1)).slice(-2) + "-" + ("0" + (startdate.getDate()+1)).slice(-2) + "-" + startdate.getFullYear();
-    var enddate = new Date(event_list_archive[event].event_end_date);
-    enddate = ("0" + (enddate.getMonth() + 1)).slice(-2) + "-" + ("0" + (enddate.getDate()+1)).slice(-2) + "-" + enddate.getFullYear();
+    var startdate = new Date(event_list_archive[event].start_date);
+    startdate = ("0" + (startdate.getMonth() + 1)).slice(-2) + "-" + ("0" + (startdate.getDate())).slice(-2) + "-" + startdate.getFullYear();
+    var enddate = new Date(event_list_archive[event].end_date);
+    enddate = ("0" + (enddate.getMonth() + 1)).slice(-2) + "-" + ("0" + (enddate.getDate())).slice(-2) + "-" + enddate.getFullYear();
     var datestring = startdate;
     if(startdate !== enddate)
     {
