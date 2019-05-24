@@ -26,6 +26,8 @@ body {
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     background-image: url("../img/App_background.jpg");
     background-size: cover;
+    /* padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top); */
 }
 
 /* Portrait layout (default) */
@@ -123,6 +125,11 @@ body {
     background-color: #32AB34;
     z-index: -1;
 }
+.bottom-menu-bar {
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
 #view-label
 {
     color: white;
