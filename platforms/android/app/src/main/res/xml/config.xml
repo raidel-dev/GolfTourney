@@ -51,6 +51,7 @@
     <splash density="port-xxhdpi" src="res/screens/android/screen-xxhdpi-portrait.png" />
     <splash density="port-xxxhdpi" src="res/screens/android/screen-xxxhdpi-portrait.png" />
     <preference name="loglevel" value="DEBUG" />
-    <preference name="SplashScreen" value="screen" />
+    <preference name="StatusBarBackgroundColor" value="#32AB34" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="orientation" value="portrait" />
 </widget>
