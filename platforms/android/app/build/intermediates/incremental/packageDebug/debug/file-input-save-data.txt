@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat May 25 00:04:14 CST 2019
+#Mon May 27 10:53:44 CST 2019
 60.set=ASSET
 52.set=ASSET
 53.base=E\:\\recent\\golftourney-mobile\\platforms\\android\\app\\build\\intermediates\\assets\\debug
